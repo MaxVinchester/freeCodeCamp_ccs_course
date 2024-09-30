@@ -1,0 +1,55 @@
+:root {
+  --circle_color_black: rgba(0, 0, 0, 1);
+  --circle_color_blue: rgb(45, 26, 196);
+  --circle_color_red: rgb(211, 29, 29);
+  --circle_color_yellow: rgb(206, 237, 33);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.black {
+  width: 200px;
+  background-color: var(--circle_color_black);
+
+}
+.blue {
+  width: 150px;
+  background-color: var(--circle_color_blue);
+
+}
+.red {
+  width: 100px;
+  background-color: var(--circle_color_red);
+
+}
+.yellow {
+  width: 50px;
+  background-color: var(--circle_color_yellow);
+
+}

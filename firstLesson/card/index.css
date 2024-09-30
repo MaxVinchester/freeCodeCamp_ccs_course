@@ -1,0 +1,138 @@
+:root {
+  --color_red: rgb(235, 56, 56);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  aspect-ratio: 10/16;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 10px;
+}
+
+.number {
+  color: var(--color_red);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.heart {
+
+  position: relative;
+  width: 30px;
+  height: 25px;
+}
+
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 0;
+  width: 17px;
+  height: 25px;
+  background-color: var(--color_red);
+  border-radius: 15px 15px 0 0;
+
+
+}
+
+.heart::before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+
+}
+
+.heart::after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%; /* rotation is around bottom-right corner this time */
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin :100% 100%;
+
+}
+
+.column_first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column_second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.hearts_container {
+  display: flex;
+  column-gap: 10px;
+
+}
+
+.reverse .heart {
+  transform: rotate(180deg);
+}
+
+.big {
+  height: 37px;
+  width: 50px;
+}
+
+.big::before, .big::after {
+  width: 25px;
+  height: 35px;
+  border-radius: 25px 25px 0 0;
+}
+
+.big::before {
+  left: 25px;
+}
+
+.column_third {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.column_third .number, .column_third .heart {
+  transform: rotate(180deg);
+}
