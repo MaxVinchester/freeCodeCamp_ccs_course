@@ -1,0 +1,54 @@
+:root {
+  --line-bg-red: rgb(255, 0, 0);
+  --line-bg-white: rgb(255, 255, 255);
+  --line-bg-blue: rgb(0, 0, 255);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.flag {
+  width: 300px;
+  aspect-ratio: 3/2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow:  0px 0px 0px 0px #000;
+}
+
+.line {
+  height: 100%;
+  width: 100%;
+}
+
+.blue {
+  background-color: var(--line-bg-blue);
+}
+
+.white {
+  background-color: var(--line-bg-white);
+}
+
+.red {
+  background-color: var(--line-bg-red);
+}
+
