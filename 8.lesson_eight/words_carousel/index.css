@@ -1,0 +1,70 @@
+:root {
+  --loader-item-bg-red: rgb(255, 0, 0);
+  --loader-item-bg-green: rgb(0, 255, 0);
+  --loader-item-bg-blue: rgb(0, 0, 255);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 52px;
+  line-height: 64px;
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+}
+
+.text::after {
+  content: 'World';
+  padding: 5px;
+  background-color: #855fde;
+  color: #fff;
+  border-radius: 10px;
+  animation: change_text 8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes change_text {
+  0% {
+    content: 'World';
+  }
+
+  25% {
+    content: 'Egor';
+  }
+
+  50% {
+    content: 'Sasha';
+  }
+
+  75% {
+    content: 'Heaven';
+  }
+
+  100% {
+    content: 'Hell';
+  }
+
+}
+
+
