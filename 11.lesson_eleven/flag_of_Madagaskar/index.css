@@ -1,0 +1,61 @@
+:root {
+  --line-bg-white: rgb(255, 255, 255);
+  --line-bg-red: rgb(255, 0, 0);
+  --line-bg-green: rgb(0,136,51);
+  --flag-max-height: 200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.flag {
+  width: 300px; /* ширина флага */
+            height: 200px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  box-shadow:  0px 0px 10px -5px #000;
+}
+
+.white {
+  background-color: var(--line-bg-white);
+  grid-row: 1 / span 2;
+  grid-column: 1;
+
+}
+
+.red {
+  background-color: var(--line-bg-red);
+  grid-row: 1;
+  grid-column: 2;
+
+}
+
+.green {
+  background-color: var(--line-bg-green);
+  grid-row: 2;
+  grid-column: 2;
+
+
+}
+
