@@ -1,7 +1,8 @@
 :root {
+  --line-bg-black: rgb(0, 0, 0);
   --line-bg-red: rgb(255, 0, 0);
-  --line-bg-white: rgb(255, 255, 255);
-  --line-bg-blue: rgb(0, 0, 255);
+  --line-bg-yellow: rgb(255, 208, 0);
+  --flag-max-height: 200px;
 }
 
 * {
@@ -28,11 +29,11 @@ body {
 }
 
 .flag {
-  width: 300px;
-  aspect-ratio: 3/2;
+  height: var(--flag-max-height);
+  width: calc(var(--flag-max-height) * 5 / 3);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  box-shadow:  0px 2px 11px -6px #000;
+  grid-template-rows: repeat(3, 1fr);
+  box-shadow:  0px 0px 10px -5px #000;
 }
 
 .line {
@@ -40,15 +41,15 @@ body {
   width: 100%;
 }
 
-.blue {
-  background-color: var(--line-bg-blue);
-}
-
-.white {
-  background-color: var(--line-bg-white);
+.black {
+  background-color: var(--line-bg-black);
 }
 
 .red {
   background-color: var(--line-bg-red);
+}
+
+.yellow {
+  background-color: var(--line-bg-yellow);
 }
 
